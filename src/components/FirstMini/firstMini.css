@@ -1,0 +1,47 @@
+.firstmini {
+    width: 100%;
+    border-radius: 20px;
+    padding: 1em 2em;
+    background-color: #2c3968;
+    box-shadow: 0 0 10px 4px #0C2340;
+
+
+    display: flex;
+    flex-direction: column;
+}
+
+.firstmini-total_sales {
+    color: white;
+    font-size: 1em;
+    font-weight: 500;
+}
+
+.firstmini-strike_through {
+    position: relative;
+
+}
+.n {
+    font-size: 1.7em;
+    font-weight: 500;
+    position: absolute;
+    top: 20%;
+
+}
+
+.firstmini-number {
+    font-size: 2.5em;
+    font-weight:500;
+    letter-spacing: 1px;
+    margin-left: 0.7em;
+
+}
+
+.firstmini-sales_volume {
+    display: block;
+    margin-top: 0.3em;
+    font-weight: 300;
+}
+
+.firstmini-graph {
+    position: relative;
+}

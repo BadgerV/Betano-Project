@@ -1,0 +1,23 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0.5em 2.5em;
+}
+
+.header-logo {
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+.header-links {
+    display: flex;
+    flex-direction: row;
+    gap: 2.5em;
+    align-items: center;
+}
+
+.header-link_item {
+    font-size: 0.9em;
+    cursor: pointer;
+}

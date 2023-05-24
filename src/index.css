@@ -1,0 +1,15 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+}
+
+html {
+  background-color: #0C2340;
+}
+
+span,h1,h2,h3,h4 {
+  color: #ffffff;
+}
