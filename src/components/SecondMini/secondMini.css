@@ -1,13 +1,14 @@
 .secondmini {
     width: 100%;
     border-radius: 20px;
-    box-shadow: 0 0 10px 4px #0C2340;
 
 
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
     gap: 1em;
 }
+
+
 
 .secondmini-top {
     display: flex;
@@ -44,7 +45,7 @@
 }
 .secondmini-bottom{
     background-color: #2c3968;
-    outline: 1px solid red;
     padding: 1em 2em;
     border-radius: 20px;
+    width: 100%;
 }

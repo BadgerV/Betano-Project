@@ -10,14 +10,18 @@ const FirstMini = () => {
     { x: 3, y: 5000 },
     { x: 4, y: 4489 },
     { x: 5, y: 2000 },
+    { x: 6, y: 3000 },
+    { x: 7, y: 3500 },
   ];
 
   const data2 = [
     { x: 1, y: 2234 },
     { x: 2, y: 3183 },
-    { x: 3, y: 1100 },
+    { x: 3, y: 3000 },
     { x: 4, y: 3478 },
     { x: 5, y: 4098 },
+    { x: 6, y: 2000 },
+    { x: 7, y: 1200 },
   ];
 
   const formatTickLabel = (tick) => {
@@ -25,10 +29,15 @@ const FirstMini = () => {
   };
 
   const legendData = [
-    { name: "sales 1", symbol: { fill: "blue" } },
-    { name: "sales 2", symbol: { fill: "red" } },
+    { name: "Joshua", symbol: { fill: "blue" } },
+    { name: "Ayo", symbol: { fill: "red" } },
   ];
 
+  const minYValue = 1000;
+  const maxYValue = 6000;
+
+  const minXValue = 1;
+  const maxXValue = 7;
   return (
     <div className="firstmini">
       <span className="firstmini-total_sales">Total Sales</span>
@@ -51,6 +60,8 @@ const FirstMini = () => {
               tickLabels: { fill: "white" }, // Set color of the tick labels
             }}
             tickFormat={formatTickLabel} // Apply formatting to the tick labels
+            domain={[minXValue, maxXValue]}
+
           />
           <VictoryAxis
             dependentAxis
@@ -60,6 +71,8 @@ const FirstMini = () => {
               tickLabels: { fill: "white" }, // Set color of the tick labels
               grid: { stroke: "#8080801c" }, // Set color of the grid lines
             }}
+            
+            domain={[minYValue, maxYValue]}
           />
           <VictoryLine
             data={data}
@@ -77,7 +90,7 @@ const FirstMini = () => {
           <VictoryLegend
             x={280}
             orientation="horizontal"
-            gutter={20}
+            gutter={30}
             style={{
               labels: { fill: "white" },
             }}

@@ -1,5 +1,6 @@
 import React from 'react'
 import FirstMini from '../FirstMini/FirstMini';
+import Roles from '../Roles/Roles';
 import SecondMini from '../SecondMini/SecondMini';
 import './firstVisuals.css';
 
@@ -8,7 +9,8 @@ const FirstVisuals = () => {
     <div className = "firstvisuals">
         <FirstMini />
         <div className="secondmini-container"><SecondMini /></div>
-        <FirstMini />
+        <div className="secondmini-container"><Roles /></div>
+        
     </div>
   )
 }

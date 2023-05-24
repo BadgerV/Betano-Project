@@ -1,5 +1,15 @@
 import "./secondMini.css";
 import { PieChart, Pie, Cell } from "recharts";
+import {
+  ComposedChart,
+  Bar,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  Legend,
+  ResponsiveContainer,
+} from 'recharts';
 
 const SecondMini = () => {
   const RADIAN = Math.PI / 180;
@@ -8,6 +18,34 @@ const SecondMini = () => {
     { name: "B", value: 20, color: "#0C2340" },
     { name: "C", value: 50, color: "green" },
   ];
+
+  const data1 = [
+    {
+      name: 'January',
+      pv: 800,
+    },
+    {
+      name: 'February',
+      pv: 967,
+    },
+    {
+      name: 'March',
+      pv: 1098,
+    },
+    {
+      name: 'April',
+      pv: 1200,
+    },
+    {
+      name: 'May',
+      pv: 1108,
+    },
+    {
+      name: 'June',
+      pv: 680,
+    },
+  ];
+  
 
   const cx = 150;
   const cy = 200;
@@ -69,19 +107,40 @@ const SecondMini = () => {
               ))}
             </Pie>
 
-            <text x={45} y={225} textAnchor="start" fill = "grey" fontSize= "1px">
+            <text x={45} y={225} textAnchor="start" fill="grey" fontSize="1px">
               {`${data[0].value}`}
             </text>
-            <text x={265} y={225} textAnchor="end" fill = "grey" fontSize= "1px">
+            <text x={265} y={225} textAnchor="end" fill="grey" fontSize="1px">
               {`${data[data.length - 1].value}`}
             </text>
 
             {needle(value, data, cx, cy, iR, oR, "#ffffff")}
           </PieChart>
         </div>
-        <span className="secondmini-top_price"><span>$</span>29</span>
+        <span className="secondmini-top_price">
+          <span>$</span>29
+        </span>
       </div>
-      <div className="secondmini-bottom"></div>
+      <div className="secondmini-bottom">
+      <ResponsiveContainer width={350} height={300}>
+      <ComposedChart
+          layout="vertical"
+          data={data1}
+          margin={{
+            top: 20,
+            right: 20,
+            bottom: 20,
+            left: 20,
+          }}
+        >
+          <CartesianGrid strokeOpacity={0} />
+          <XAxis type="number" tick={{ dy: 15, fill: 'white' }} hide/>
+          <YAxis dataKey="name" type="category" scale="band" tick={{ dy: 15, fill: 'white' }}/>
+          <Tooltip />
+          <Bar dataKey="pv" barSize={20} fill="#413ea0" />
+        </ComposedChart>
+      </ResponsiveContainer>
+      </div>
     </div>
   );
 };

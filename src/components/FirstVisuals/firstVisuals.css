@@ -1,11 +1,17 @@
 .firstvisuals {
     padding: 1em 2.5em;
-    display: flex;
-    flex-direction: row;
-    gap: 1.5em;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 2fr 0.2fr 1.5fr;
+    gap: 1em;
 }
 
 .secondmini-container {
     background-color: #0C2340;
+}
+
+
+@media screen and (max-width : 1320px) {
+    .firstvisuals {
+        grid-template-columns: 1fr;
+    }
 }
